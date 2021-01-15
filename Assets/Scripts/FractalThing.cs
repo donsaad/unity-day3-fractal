@@ -7,7 +7,7 @@ public class FractalThing : MonoBehaviour
     [SerializeField, Range(1, 10)]
     int depth = 3;
     [SerializeField]
-    bool isRotating = true;
+    bool isRotating = false;
     void Start()
     {
         if (depth <= 1) // stopping condition
@@ -27,7 +27,7 @@ public class FractalThing : MonoBehaviour
     {
         if (isRotating)
         {
-            transform.Rotate(0f, 10.0f * Time.deltaTime, 0f);
+            transform.Rotate(0f, 20.0f * Time.deltaTime, 0f);
         }
     }
     void CreateChildren(Vector3 direction)
