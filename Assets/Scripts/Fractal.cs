@@ -14,8 +14,8 @@ public class Fractal : MonoBehaviour
         }
         //childPrefab.transform.localScale = transform.localScale * 0.7f;
         child = Instantiate(childPrefab, transform);
-        child.transform.localPosition = Vector3.right;
-       // child.transform.localScale = transform.localScale * 0.7f;
+        child.transform.localPosition = 0.75f * Vector3.right;
+        child.transform.localScale = Vector3.one * 0.5f;
         child.AddComponent<Fractal>().childPrefab = childPrefab;
         child.GetComponent<Fractal>().depth = depth - 1;
     }
